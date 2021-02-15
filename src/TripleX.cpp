@@ -4,6 +4,7 @@
 #include <iostream>
 
 /**
+ * TripleX
  * Main Function
  */
 int main() 
@@ -17,10 +18,12 @@ int main()
 
     // Expression Statements - expressions that end with a semicolon
     // Print welcome messages to the terminal
-    std::cout << "You're a secret agent, breaking into a secure server room!";
+    std::cout << "You're Lightning McQueen, and want to unlock your full potential!";
+    // std::cout << "You're a secret agent, breaking into a secure server room!";
     // Add a new line
     std::cout << std::endl;
-    std::cout << "You need to enter the correct codes to continue..." << std::endl;
+    // std::cout << "You need to enter the correct codes to continue..." << std::endl;
+    std::cout << "Your NOS tank has a 3 digit lock on it, and the label underneath reads..." << std::endl;
 
     // Declaration Statements - statements where we "declare" something
     // Declaring 3 number codes
@@ -33,7 +36,7 @@ int main()
 
     // Print CodeSum and CodeProduct to the terminal
     std::cout << std::endl;
-    std::cout << "+ There are 3 numbers in the code" << std::endl;
+    std::cout << "+ There are 3 numbers in the code." << std::endl;
     std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
     std::cout << "+ The codes multiply to: " << CodeProduct << std::endl;
     std::cout << std::endl;
@@ -43,7 +46,7 @@ int main()
     // in addition, these non-numeric inputs will halt "cin" from working until reset.
     int GuessA, GuessB, GuessC;
 
-    std::cout << "Please enter your guess for the codes, i.e. 1 2 3 : ";
+    std::cout << "Please enter your guess for the codes, (1 2 3) : ";
     // cin         basic "character input" to get user's input
     // >>          "extraction operator" extract characters from the input stream
     // PlayerGuess the extracted user's input will be stored in this variable now
@@ -62,10 +65,11 @@ int main()
     // Check to see if the guess sum / product matches the actual sum / product
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "You WIN!";
+        std::cout << "Fantastic! You've unlocked the NOS tank and are on your way to win the race!";
     } else
     {
-        std::cout << "Sorry but neither your product nor your sum is correct";
+        std::cout << "Sorry, but the code you entered doesn't match the records." << std::endl;
+        std::cout << "You've failed to unlock your NOS tank(s) and might loose the race. Good luck!";
     }
 
     // Return Statement
