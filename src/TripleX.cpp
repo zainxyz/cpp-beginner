@@ -20,9 +20,12 @@ int main()
     const int b = 6;
     const int c = 7;
 
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << c << std::endl;
+    int sum = a + b + c;
+    int product = a * b * c;
+
+    std::cout << std::endl;
+    std::cout << sum << std::endl;
+    std::cout << product << std::endl;
 
     return 0;
 }
