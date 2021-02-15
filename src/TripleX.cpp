@@ -56,8 +56,17 @@ int main()
     int GuessProduct = GuessA * GuessB * GuessC;
 
     // Print out the uers's guess
-    std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
-    std::cout << "Whos sum & product are: " << GuessSum << " " << GuessProduct << std::endl;
+    // std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
+    // std::cout << "Whos sum & product are: " << GuessSum << " " << GuessProduct << std::endl;
+
+    // Check to see if the guess sum / product matches the actual sum / product
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
+    {
+        std::cout << "You WIN!";
+    } else
+    {
+        std::cout << "Sorry but neither your product nor your sum is correct";
+    }
 
     // Return Statement
     return 0;
