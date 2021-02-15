@@ -18,12 +18,13 @@ int main()
 
     // Expression Statements - expressions that end with a semicolon
     // Print welcome messages to the terminal
-    std::cout << "You're Lightning McQueen, and want to unlock your full potential!";
+    std::cout << "You're Lightning McQueen, and want to unlock your full potential!\n";
     // std::cout << "You're a secret agent, breaking into a secure server room!";
     // Add a new line
-    std::cout << std::endl;
+    // std::cout << std::endl;
     // std::cout << "You need to enter the correct codes to continue..." << std::endl;
-    std::cout << "Your NOS tank has a 3 digit lock on it, and the label underneath reads..." << std::endl;
+    // std::cout << "Your NOS tank has a 3 digit lock on it, and the label underneath reads..." << std::endl;
+    std::cout << "Your NOS tank has a 3 digit lock on it, and the label underneath reads...\n";
 
     // Declaration Statements - statements where we "declare" something
     // Declaring 3 number codes
@@ -36,7 +37,7 @@ int main()
 
     // Print CodeSum and CodeProduct to the terminal
     std::cout << std::endl;
-    std::cout << "+ There are 3 numbers in the code." << std::endl;
+    std::cout << "+ There are 3 numbers in the code.\n";
     std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
     std::cout << "+ The codes multiply to: " << CodeProduct << std::endl;
     std::cout << std::endl;
@@ -55,8 +56,8 @@ int main()
     std::cin >> GuessA >> GuessB >> GuessC;
     std::cout << std::endl;
 
-    int GuessSum = GuessA + GuessB + GuessC;
-    int GuessProduct = GuessA * GuessB * GuessC;
+    const int GuessSum = GuessA + GuessB + GuessC;
+    const int GuessProduct = GuessA * GuessB * GuessC;
 
     // Print out the uers's guess
     // std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
@@ -68,7 +69,7 @@ int main()
         std::cout << "Fantastic! You've unlocked the NOS tank and are on your way to win the race!";
     } else
     {
-        std::cout << "Sorry, but the code you entered doesn't match the records." << std::endl;
+        std::cout << "Sorry, but the code you entered doesn't match the records.\n";
         std::cout << "You've failed to unlock your NOS tank(s) and might loose the race. Good luck!";
     }
 
