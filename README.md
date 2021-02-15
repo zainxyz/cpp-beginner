@@ -15,6 +15,9 @@
 You can run the following command in order to easily compile and run the 'TripleX' application:
 
 ```bash
+# change into the src/ directory first
+cd src/
+
 # macOS
 g++ triplex.cpp -o triplex && clear && triplex
 # Windows
