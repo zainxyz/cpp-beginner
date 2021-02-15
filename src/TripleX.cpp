@@ -3,7 +3,7 @@
 using namespace std;
 
 // Declare some global vars.
-string MessageWelcome = "You're Lightning McQueen, and want to unlock your full potential!\nYour NOS tank has a combination lock on it and the label underneath reads...\n";
+string MessageWelcome = "\n\nYou're Lightning McQueen, and want to unlock your full potential!\nYour NOS tank has a combination lock on it and the label underneath reads...\n";
 string MessageWin = "\nFantastic! You've unlocked the NOS tank and are on your way to win the race!";
 string MessageLoose = "\nSorry, but the combination you entered doesn't match the records.\nYou've failed to unlock your NOS tank(s) and might loose the race. Good luck!";
 string MessageAskForInput = "\n\nPlease enter your guess for the 3 digit combination (1, 2, 3) : ";
@@ -19,7 +19,7 @@ void PrintIntroduction()
 /**
  * Let's play the TripleX game!
  */
-void PlayGame()
+bool PlayGame()
 {
     // Print welcome message to the terminal.
     PrintIntroduction();
@@ -53,9 +53,13 @@ void PlayGame()
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         cout << MessageWin;
+        // Player has completed the current level.
+        return true;
     } else
     {
         cout << MessageLoose;
+        // Player lost the current level;
+        return false;
     }
 }
 
@@ -65,8 +69,16 @@ void PlayGame()
  */
 int main() 
 {
-    // Let's play the game.
-    PlayGame();
+    while(true)
+    {
+        // Declare a bool for level completion.
+        // Let's play the game.
+        bool bLevelComplete = PlayGame();
+        // Clear out any errors.
+        cin.clear();
+        // Discard the input buffer.
+        cin.ignore();
+    }
     // Return Statement
     return 0;
 }
