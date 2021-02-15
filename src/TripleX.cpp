@@ -39,7 +39,8 @@ int main()
     std::cout << std::endl;
 
     // Store the player's guess
-    // Since these are INTs, any non-numeric input will be converted to a '0'
+    // Since these are INTs, any non-numeric input will be converted to a '0',
+    // in addition, these non-numeric inputs will halt "cin" from working until reset.
     int GuessA, GuessB, GuessC;
 
     std::cout << "Please enter your guess for the codes, i.e. 1 2 3 : ";
