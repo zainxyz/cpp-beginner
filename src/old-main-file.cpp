@@ -32,6 +32,11 @@ int main()
     const int CodeB = 2;
     const int CodeC = 3;
 
+    // Generate a random value
+    // <value> % <modulus>
+    // Range of numbers between `0` and `moduls - 1`
+    const int CodeRandom = rand() % 10;
+
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
 

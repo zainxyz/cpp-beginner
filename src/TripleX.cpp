@@ -28,9 +28,9 @@ bool PlayGame(int Difficulty, int MaxLevel)
     PrintIntroduction(Difficulty);
 
     // Initialize the 3 codes..
-    const int CodeA = 1;
-    const int CodeB = 2;
-    const int CodeC = 3;
+    const int CodeA = rand() % Difficulty + 1;
+    const int CodeB = rand() % Difficulty + 1;
+    const int CodeC = rand() % Difficulty + 1;
 
     // Evaluate the SUM and PRODUCT of these codes.
     const int CodeSum = CodeA + CodeB + CodeC;
