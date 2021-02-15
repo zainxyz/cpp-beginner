@@ -16,5 +16,13 @@ int main()
     std::cout << std::endl;
     std::cout << "You need to enter the correct codes to continue...";
 
+    const int a = 5;
+    const int b = 6;
+    const int c = 7;
+
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << c << std::endl;
+
     return 0;
 }
