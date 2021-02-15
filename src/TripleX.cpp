@@ -9,10 +9,10 @@
 int main() 
 {
     // namespace::myfunction
-    // std  namespace standard
+    // std  "standard" namespace
     // ::   scope operator
-    // cout basic output streams to console
-    // <<   what to output
+    // cout basic "character output" streams to console
+    // <<   "insertion operator" inserting characters (what's on RHS) to the output stream
     // std::cout << "Hello World!";
 
     // Expression Statements - expressions that end with a semicolon
@@ -24,9 +24,9 @@ int main()
 
     // Declaration Statements - statements where we "declare" something
     // Declaring 3 number codes
-    const int CodeA = 5;
-    const int CodeB = 6;
-    const int CodeC = 7;
+    const int CodeA = 1;
+    const int CodeB = 2;
+    const int CodeC = 3;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
@@ -36,9 +36,27 @@ int main()
     std::cout << "+ There are 3 numbers in the code" << std::endl;
     std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
     std::cout << "+ The codes multiply to: " << CodeProduct << std::endl;
+    std::cout << std::endl;
 
     // Store the player's guess
-    int PlayerGuess;
+    // Since these are INTs, any non-numeric input will be converted to a '0'
+    int GuessA, GuessB, GuessC;
+
+    std::cout << "Please enter your guess for the codes, i.e. 1 2 3 : ";
+    // cin         basic "character input" to get user's input
+    // >>          "extraction operator" extract characters from the input stream
+    // PlayerGuess the extracted user's input will be stored in this variable now
+    // If player enters 234 it will be counted as a single number; however,
+    // if the player enters 2 3 4, each space counts as a separate input.
+    std::cin >> GuessA >> GuessB >> GuessC;
+    std::cout << std::endl;
+
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    // Print out the uers's guess
+    std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
+    std::cout << "Whos sum & product are: " << GuessSum << " " << GuessProduct << std::endl;
 
     // Return Statement
     return 0;
