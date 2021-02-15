@@ -36,25 +36,25 @@ int main()
     const int CodeProduct = CodeA * CodeB * CodeC;
 
     // Print CodeSum and CodeProduct to the terminal
-    std::cout << std::endl;
-    std::cout << "+ There are 3 numbers in the code.\n";
-    std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
-    std::cout << "+ The codes multiply to: " << CodeProduct << std::endl;
-    std::cout << std::endl;
+    // std::cout << std::endl;
+    std::cout << "\n+ There are 3 numbers in the code.";
+    std::cout << "\n+ The codes add-up to: " << CodeSum;
+    std::cout << "\n+ The codes multiply to: " << CodeProduct;
+    // std::cout << std::endl;
 
     // Store the player's guess
     // Since these are INTs, any non-numeric input will be converted to a '0',
     // in addition, these non-numeric inputs will halt "cin" from working until reset.
     int GuessA, GuessB, GuessC;
 
-    std::cout << "Please enter your guess for the codes, (1 2 3) : ";
+    std::cout << "\n\nPlease enter your guess for the codes, (1 2 3) : ";
     // cin         basic "character input" to get user's input
     // >>          "extraction operator" extract characters from the input stream
     // PlayerGuess the extracted user's input will be stored in this variable now
     // If player enters 234 it will be counted as a single number; however,
     // if the player enters 2 3 4, each space counts as a separate input.
     std::cin >> GuessA >> GuessB >> GuessC;
-    std::cout << std::endl;
+    // std::cout << std::endl;
 
     const int GuessSum = GuessA + GuessB + GuessC;
     const int GuessProduct = GuessA * GuessB * GuessC;
@@ -66,10 +66,10 @@ int main()
     // Check to see if the guess sum / product matches the actual sum / product
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "Fantastic! You've unlocked the NOS tank and are on your way to win the race!";
+        std::cout << "\nFantastic! You've unlocked the NOS tank and are on your way to win the race!";
     } else
     {
-        std::cout << "Sorry, but the code you entered doesn't match the records.\n";
+        std::cout << "\nSorry, but the code you entered doesn't match the records.\n";
         std::cout << "You've failed to unlock your NOS tank(s) and might loose the race. Good luck!";
     }
 
