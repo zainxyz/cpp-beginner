@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 // Declare some global vars.
 // string MessageWelcome = "\n\nYou're Lightning McQueen, and want to unlock your full potential!\nYour NOS tank has a combination lock on it and the label underneath reads...\n";
 string MessageAskForInput = "\n\nPlease enter your guess for the 3 digit combination (1, 2, 3) : ";
-string MessageLevelComplete = "\n*** Great! You've unlocked this NOS tank and are on your way to win the race! Keep going! ***";
+// string MessageLevelComplete = "\n*** Great! You've unlocked this NOS tank and are on your way to win the race! Keep going! ***";
 string MessageLevelTryAgain = "\n*** Whoops! You've entered the wrong code. Careful as you might loose the race! Try again! ***";
 string MessageWin = "\n*** Fantastic! You've unlocked all the NOS tanks, boosted yourself to the front of the line and won the race! ***";
 
@@ -28,9 +29,9 @@ bool PlayGame(int Difficulty, int MaxLevel)
     PrintIntroduction(Difficulty);
 
     // Initialize the 3 codes..
-    const int CodeA = rand() % Difficulty + 1;
-    const int CodeB = rand() % Difficulty + 1;
-    const int CodeC = rand() % Difficulty + 1;
+    const int CodeA = rand() % Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty;
 
     // Evaluate the SUM and PRODUCT of these codes.
     const int CodeSum = CodeA + CodeB + CodeC;
@@ -58,7 +59,8 @@ bool PlayGame(int Difficulty, int MaxLevel)
         // Only print the level complete message if you're not at max level.
         if (Difficulty < MaxLevel) 
         {
-            cout << MessageLevelComplete;
+            // cout << MessageLevelComplete;
+            cout << "\n*** Great! You've unlocked level " << Difficulty << " NOS tank and are on your way to win the race! Keep going! ***";
         }
         // Player has completed the current level.
         return true;
@@ -76,6 +78,8 @@ bool PlayGame(int Difficulty, int MaxLevel)
  */
 int main() 
 {
+    // Create a new random sequence based on the time of day.
+    srand(time(NULL));
     // Current Level
     int CurrentLevel = 1;
     // Max Level
